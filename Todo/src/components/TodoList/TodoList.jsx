@@ -1,7 +1,8 @@
-function TodoList(){
+import Todo from "../Todo/Todo"
+function TodoList({todos}){
     return(
         <>
-            <TodoList/>
+            { todos && todos.map((todo) => <Todo key={todo.id} text={todo.text} isFinished = {todo.isFinished} /> )}
         </>
     );
 }
